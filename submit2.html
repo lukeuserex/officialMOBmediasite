@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<style>
+  .card {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    background-color: #f0f0f0;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+</style>
+<body>
+  <div id="project-container"></div>
+
+  <script src="script.js"></script>
+  <script>
+    // Sample project data
+    const projects = [
+      { name: 'Tony Soprano 3', description: 'Nines ft Luke RO', author: 'Luke RO', image: 'profile1.jpg' },
+      { name: 'Renegade', description: 'Lil Wayne ft Eminem ft Luke Ro', image: 'profile2.jpg' },
+      // Add more project data here...
+    ];
+
+    // Generate project cards
+    const projectContainer = document.getElementById('project-container');
+
+    projects.forEach(project => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img class="profile-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/0_Wiley1.jpg/640px-0_Wiley1.jpg" alt="Profile Image">
+        <h3>${project.name}</h3>
+        <p>${project.description}</p>
+      `;
+      card.addEventListener('click', () => {
+        // Handle card click event (e.g., show project details)
+        console.log(`Clicked on ${project.name}`);
+      });
+      projectContainer.appendChild(card);
+    });
+  </script>
+</body>
+</html>

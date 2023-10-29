@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist Collaboration Projects</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Add this to your <head> section -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mui/material@5.0.0/dist/css/mui.min.css">
+<script src="https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mui/material@5.0.0/dist/mui.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body>
+  
+  <header class="header">
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Explore</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <h1>Artist Collaboration Projects</h1>
+
+    <section class="project-list">
+      <!-- Project 1 -->
+      <article class="project">
+        <h2>@LukeRo.T.O.A.O's Project</h2>
+        <div class="selected-artists">
+          <img src="https://i.scdn.co/image/ab67616100005174d1aa570ddb3d4f9dfa88a62f" alt="Skrapz">
+          <img src="https://img.buzzfeed.com/buzzfeed-static/complex/images/wfpvaaplrflie4nxin0f/tion-wayne.png?output-format=jpg&output-quality=auto" alt="Tion-Wayne">
+          <img src="https://cdn1.umg3.net/352/files/2022/05/backg1.jpg" alt="Clavish">
+        </div>
+        <p class="description"> I have decided to partner up Skrapz, Tion Wayne and Clavish for a mad link up and to destory a track together. Skrapz will bring his olskool street histler flow and wisdom whilst Tion and Clavish will tap into a tounger audience which will bring a mix of younger generation and older gen together</p>
+        <div class="voting">
+       <!-- Add a Material-UI button -->
+<button class="mui-button">Up Vote</button>
+<!-- Add a Material-UI button -->
+<button class="mui-button">Down Vote</button>
+
+        </div>
+        <div class="comments">
+          <h3>Comments:</h3>
+          <ul class="comment-list">
+            <li>User 1: This project looks promising.</li>
+            <li>User 2: Can't wait to see it in action!</li>
+          </ul>
+          <textarea class="comment-input" rows="4" placeholder="Add a comment..."></textarea>
+          <!-- Add a Material-UI button -->
+<button class="mui-button">Post Comment</button>
+<!-- Add a button with hover effects -->
+<button class="mui-button" id="button-style">Interactive Button</button>
+
+
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project">
+        <h2>Project Title 2</h2>
+        <div class="selected-artists">
+          <img src="https://mixmag.net/assets/uploads/images/MM_COVER_Nines-LR.jpg" alt="Nines">
+          <img src="https://hips.hearstapps.com/hmg-prod/images/mh-fatjoe-sociallead-64a85cbd14f4e.png?crop=0.473xw:0.946xh;0.524xw,0.0321xh&resize=1200:*" alt="Fat Joe">
+          <img src="https://i.guim.co.uk/img/media/f75584ad2a08248493d14220bc0c76073a753144/0_66_3544_2126/master/3544.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=325458d309f8d0c63155d52b1e111ab4" alt="Drake">
+        </div>
+        <p class="description">Description: Another project description here.</p>
+        <div class="voting">
+          <button class="upvote-button">Up Vote</button>
+          <button class="downvote-button">Down Vote</button>
+        </div>
+        <div class="comments">
+          <h3>Comments:</h3>
+          <ul class="comment-list">
+            <!-- Comments for Project 2 -->
+          </ul>
+          <textarea class="comment-input" rows="4" placeholder="Add a comment..."></textarea>
+          <button class="comment-button">Post Comment</button>
+        </div>
+      </article>
+
+      <!-- Add more project articles here -->
+    </section>
+  </div>
+
+  <button id="back-button">Go Back to Artist Page</button>
+
+  <script>
+    // Function to parse the query string to get selected artists
+    function getSelectedArtists() {
+      const queryParams = new URLSearchParams(window.location.search);
+      const artists = queryParams.get("artists");
+
+      if (artists) {
+        const artistList = artists.split(",");
+        const selectedArtistsList = document.getElementById("selected-artists-list");
+
+        selectedArtistsList.innerHTML = "<h2>Selected Artists:</h2><ul>";
+
+        artistList.forEach((artist) => {
+          selectedArtistsList.innerHTML += "<li>" + artist + "</li>";
+        });
+
+        selectedArtistsList.innerHTML += "</ul>";
+      } else {
+        selectedArtistsList.innerHTML = "<p>No artist data received.</p>";
+      }
+    }
+
+    // Call the function when the page loads
+    getSelectedArtists();
+
+
+    // Add a click event listener to the back button
+    document.getElementById('back-button').addEventListener('click', function () {
+            // Use the browser's history to navigate back
+            window.history.back();
+
+        
+  $(document).ready(function() {
+    // Hide artist info initially
+    $(".artist-info").hide();
+
+    // Toggle artist info when clicking on the artist image
+    $(".artist-image").click(function() {
+      var artistInfo = $(this).siblings(".artist-info");
+      artistInfo.toggle();
+    });
+  });
+
+
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

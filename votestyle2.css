@@ -1,0 +1,162 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .project {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-details {
+    margin-bottom: 10px;
+  }
+  
+  .project-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .project-description {
+    color: #666;
+  }
+  
+  .rapper-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .rapper-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #555;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .like-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .like-button i {
+    margin-right: 5px;
+  }
+  
+  .like-count {
+    font-size: 14px;
+  }
+  
+  footer {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .navigation {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  
+  .navigation li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .navigation li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .copy-right {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project {
+      padding: 10px;
+    }
+  
+    .rapper-icons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .rapper-icon {
+      margin-bottom: 10px;
+    }
+  }
+  

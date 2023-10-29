@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="animate.min.css">
+    <title>MOB submit page</title>
+</head>
+<style>
+    body{
+        font-family: sans-serif;
+    }
+
+    .project-box{
+        height: 150px;
+        width: 70em;
+        background-color: grey;
+        border-radius: 40px;
+
+    }
+    
+    .like-button {
+        display: inline-block;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-color: white;
+        border: none;
+        margin-right: 10px;
+        font-size: 1.2em;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .like-button:hover {
+        transform: scale(1.05);
+    }
+    
+    .like-button.liked {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    .like-button.disliked {
+        background-color: #f44336;
+        color: white;
+    }
+    
+    .like-button i {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+    
+    .like-count {
+        font-size: 1.2em;
+        margin-left: 20px;
+    }
+
+    .rapperone{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: red;
+        
+    }
+    .rappertwo{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: red;
+    }
+    .rapperthree{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: red;
+    }
+</style>
+<body>
+
+    <h2>your project</h2>
+
+    <div>
+        <i class="material-icons">folder</i>
+
+        <div class="project-box">
+
+            <div class="rapperone">one</div>
+            <div class="rappertwo">two</div>
+            <div class="rapperthree">three</div>
+           
+        </div>
+        <button class="like-button upvote">
+            <i class="material-icons">thumb_up</i> Like
+        </button>
+        <button class="like-button downvote">
+            <i class="material-icons">thumb_down</i> Dislike
+        </button>
+        <span class="like-count">0</span>
+    </div>
+
+    <h2>live projects</h2>
+    
+    <script>
+        let upvoteButton = $('.upvote');
+        let downvoteButton = $('.downvote');
+        let likeCount = $('.like-count');
+        let currentCount = parseInt(likeCount.text());
+
+        upvoteButton.click(function() {
+            if (!upvoteButton.hasClass('liked')) {
+                upvoteButton.addClass('liked');
+                currentCount++;
+                likeCount.text(currentCount);
+            } else {
+                upvoteButton.removeClass('liked');
+                currentCount--;
+                likeCount.text(currentCount);
+            }
+        });
+
+        downvoteButton.click(function() {
+            if (!downvoteButton.hasClass('disliked')) {
+                downvoteButton.addClass('disliked');
+                currentCount--;
+                likeCount.text(currentCount);
+            } else {
+                downvoteButton.removeClass('disliked');
+                currentCount++;
+                likeCount.text(currentCount);
+            }
+        });
+    </script>
+</body>
+</html>

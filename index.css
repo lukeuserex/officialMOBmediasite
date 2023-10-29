@@ -1,0 +1,357 @@
+    /* Center the grid */
+    html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+    /* Rest of your CSS styles */
+    @media (max-width: 768px) {
+        /* Styles for screens up to 768px wide (e.g., tablets) */
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        /* Styles for screens up to 480px wide (e.g., smartphones) */
+        .grid-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 20px;
+      color: red;
+    }
+
+    /* Style the navigation */
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#Artist-Directory{
+  color: black;
+  position: absolute;
+  margin: 100px;
+  padding: 20px;
+  ;
+}
+
+  
+      /* Define the grid container */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 600px;
+        padding: 20px;
+      }
+  
+      /* Define the card styles */
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        transition: box-shadow 0.3s;
+        width: 200px; /* Adjust card width */
+        height: 200px; /* Adjust card height */
+      }
+  
+      /* Add hover effect to the cards */
+      .card:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: scale(1.2);
+        transition: 0.5s ease-in;
+
+      }
+
+  /* Style the selected artist section */
+.selected-artist {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.selected-artist div {
+  width: 100px;
+  height: 100px;
+  background-color: #f2f2f2;
+  border-radius: 50%; /* Make the div circular */
+  margin: 0 10px; /* Adjust the margin */
+  overflow: hidden; /* Hide the overflow */
+}
+
+.selected-artist div img {
+  width: 100%; /* Make the image fill the circular div */
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the div */
+}
+
+      
+      .selected-artist div img {
+        width: 100%; /* Make the image fill the circular div */
+        height: 100%;
+        object-fit: cover; /* Maintain aspect ratio and cover the div */
+      }
+      .selected-artist div.fade-in {
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      
+      .selected-artist div.fade-in.show {
+        opacity: 1;
+      }
+      
+      
+
+      #one{
+        background-image: url('https://media.gq-magazine.co.uk/photos/61b72daf71492e38eef5584e/16:9/w_2560%2Cc_limit/01.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }
+
+      #two{
+        background-image: url('https://data.mothership.tools/mothershiptools-ukprod/wp-content/uploads/2020/03/Fredo-Press_.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }
+
+
+      #three{
+        background-image: url('https://i.scdn.co/image/ab6761610000e5eba00b11c129b27a88fc72f36b');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }
+
+      #four{
+        background-image: url('https://i.scdn.co/image/ab6761610000e5eb3d467ace27d3c94063db8cba');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }
+
+      #five{
+        background-image: url('https://remezcla.com/wp-content/uploads/2022/10/GettyImages-1430194923-1424x1068.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }
+      #six{
+        background-image: url('https://trenchtrenchtrench.com/assets/articles/the-enigmatic-genius-of-j-hus/J-Hus.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }     #seven{
+        background-image: url('https://allhiphop.com/wp-content/uploads/2022/08/Jay-Z.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }     #eight{
+        background-image: url('https://i.guim.co.uk/img/media/05d40829197a54e67e8bde4bcaffe35d5da1fe46/0_183_3414_2050/master/3414.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=513db5d3718def4a96b1cac624e5cc47');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }     #nine{
+        background-image: url('https://hips.hearstapps.com/hmg-prod/images/aap-rocky-from-the-film-monster-poses-for-a-portrait-in-the-youtube-x-getty-images-portrait-studio-at-2018-sundance-film-festival-on-january-22-2018-in-park-city-utah-photo-by-robby-klein_getty-images.jpg?crop=1xw:0.75xh;center,top&resize=1200:*');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }     #ten{
+        background-image: url('https://i.discogs.com/J3YR8INc5aowanPcadWWyuo1FLstt9s4rCyP7G4fMsM/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MDk1/NTUtMTU3MDU3Njc4/Ny0zODc5LmpwZWc.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }
+
+      #eleven{
+        background-image: url('https://media.gq.com/photos/637586a5f917e594b07767d2/16:9/pass/IMG_4850.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }
+      #tweleve{
+        background-image: url('https://i.scdn.co/image/ab6761610000e5eb03578c92e15089c645b794f5');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+
+
+      }
+      #thirteen{
+        background-image: url('https://pbs.twimg.com/profile_images/985101785047191552/rnwHZQsR_400x400.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }
+
+      #fourteen{
+        background-image: url('https://static.standard.co.uk/s3fs-public/thumbnails/image/2019/11/29/11/ms-banks-2911.jpg?width=968&auto=webp&quality=50&crop=968%3A645%2Csmart');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }
+      #fifteen{
+        background-image: url('https://media.glamour.com/photos/56957b2a085ae0a85036c352/master/w_1600%2Cc_limit/entertainment-2015-03-nicki-minaj-main.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }
+      #sixteen{
+        background-image: url('https://i.guim.co.uk/img/media/999a815eb48fb549192a35e4105352fe401c1075/0_0_5000_3000/master/5000.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=f1d4e42470cb8bca03aaf0b1e3f72512');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+
+
+      }
+      
+
+      h1{
+        font-family: sans-serif;
+      }
+      .fade-in {
+        opacity: 0;
+        animation: fadeInAnimation 1s ease-in-out forwards;
+      }
+      
+      @keyframes fadeInAnimation {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+.button-style {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-style:hover {
+  background-color: #45a049;
+}
+
+

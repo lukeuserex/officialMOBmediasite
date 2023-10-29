@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+  
+  body {
+    background-color: #f6f6f6;
+    color: #333;
+  }
+  
+  .header {
+    background-color: #3061aa;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+  }
+  
+  .content {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #ff6347;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .project {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: calc(33.33% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project h2 {
+    font-size: 20px;
+    color: #ff6347;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .selected-artist div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the div */
+    border-radius: 50%; /* Apply border-radius to make the image circular */
+  }
+  
+  
+  .selected-artists img {
+    width: 80px; /* Adjust the width to your preference */
+    height: 80px; /* Adjust the height to your preference */
+    border-radius: 50%; /* Make the images circular */
+    object-fit: cover; /* Ensure the images maintain their aspect ratio */
+    margin: 0 10px; /* Add horizontal spacing between images */
+  }
+  
+  .selected-artist div {
+    width: 100px;
+    height: 100px;
+    background-color: #f2f2f2;
+    border-radius: 50%; /* Make the div circular */
+    margin: 0 10px; /* Adjust the margin */
+    overflow: hidden; /* Hide the overflow */
+  }
+  
+  
+  .selected-artists img:last-child {
+    margin-right: 0;
+  }
+  
+  .selected-artists img:last-child {
+    margin-right: 0;
+  }
+  
+  .description {
+    color: #777;
+    margin-bottom: 20px;
+    margin: 5px;
+    padding: 5px;
+  }
+  
+  .voting {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .voting button {
+    background-color: #4263e5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .voting button:hover {
+    background-color: #40d736;
+  }
+  
+  .comments {
+    margin-top: 20px;
+    color: #777;
+  }
+  
+  .comment-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .comment-button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .comment-button:hover {
+    background-color: #ff4500;
+  }
+  
+
+  #button-style {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .button-style:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
